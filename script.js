@@ -13,14 +13,40 @@ function calcularMedia (notas) {
 
 let mediaFunction = prompt("Digite uma nota")
 
-    if (mediaFunction > 7) {
-        document.write("Parabéns vocês passou na média!")
-    } else {
-        document.write("Infelizmente você está de recuperação.")
+if (mediaFunction > 7) {
+    document.write("Parabéns vocês passou na média!")
+} else {
+    document.write("Infelizmente você está de recuperação.")
+}
+
+
+let studentName = ["Joaquina", "Kirara", "Salem", "Haley", "Luke"];
+
+studentName.forEach((Element) => {document.write("<br>" + Element)});
+
+
+let professores = [
+    {
+      nome:"Rayane",
+      especialidade:"Java"
+    },
+    {
+      nome:"Eduardo",
+      especialidade:"Angular"
+    },
+    {
+      nome:"Julia",
+      especialidade:"Javascript"
     }
-    
+  ]
+  
+  professores.forEach((item, indice, array)=>{
+    console.log(item.nome);
+    console.log(indice);
+})
 
 
-// Crie uma função a qual recebe um valor numérico como parâmetro que irá ser a média; 
-// caso a média seja maior que 7, retorne em um document.write() a seguinte mensagem “Parabéns você passou na média !”, já, 
-// caso a média seja menor que 7, deve escrever em um document.write() a mensagem “Infelizmente você está de recuperação.”
+
+// Agora, crie uma função javascript que irá receber uma variável como parâmetro; 
+// ela será um array de nomes de alguns alunos (pode ser nomes aleatórios). 
+// Através do método de array forEach(), imprima em tela (com document.write) todos os nomes do array, um abaixo do outro.
