@@ -42,40 +42,43 @@
 //     document.write("<br>" + nome + "<br>" + idade + "<br>" + serie + "<br>" + escola + "<br>" + materiaFavorita)
 // }
 
-// Pensando em um sistema de notas online, crie um código que irá capturar o nome da matéria e as suas quatro notas;
-//  deve ser usado um prompt dentro de uma laço while, para capturar apenas as notas. 
-// A ideia é que, a cada valor digitado no prompt, 
-// ele seja adicionado a um array e este irá ser o valor de uma propriedade de um objeto.
-
-// Exemplo: Digito o nome da matéria -> Digito as 4 notas -> montar o seguinte objeto:
-
-// {
-//   nomeMateria: “Matemática”,
-//   notas: [10,6,8,9],
-// }
-
-// Após isso, crie um laço “for” que irá calcular a média de todos os itens da propriedade notas; 
-// pode ser utilizado o método criado no exercício 01, o resultado será o retorno dessa função.
 
 
 let nomeMateria = prompt("Digite o nome da matéria")
-let arreyNotas = [];
+let arrayNotas = [];
 
-while (arreyNotas.length <= 3){
-    arreyNotas.push(parseInt(prompt("digite uma nota")));
+while (arrayNotas.length <= 3){
+    arrayNotas.push(parseInt(prompt("digite uma nota")));
 }
 
-document.write("<br>" + "Matéria: " + nomeMateria + "<br>" + "Notas: " + arreyNotas)
+document.write("<br>" + "Matéria: " + nomeMateria + "<br>" + "Notas: " + arrayNotas)
 
-function mediaArreyNotas (arreyNotas) {
+function mediaArrayNotas (arrayNotas) {
     debugger
     somaNotas = 0;
 
-    for (var nota of arreyNotas) {
+    for (var nota of arrayNotas) {
         somaNotas += nota; 
     }
-    var media = somaNotas / arreyNotas.length;
+    var media = somaNotas / arrayNotas.length;
     return media;
 }
 
-document.write("<br>" + "Média: " + mediaArreyNotas(arreyNotas))
+document.write("<br>" + "Média: " + mediaArrayNotas(arrayNotas))
+
+
+// Crie uma função que recebe um array de números e retorna o maior número dentre eles;
+//  para isso, utilize um qualquer laço de repetição.
+
+function maiorNumero(arrayNotas) {
+    let maiorNumero = -Infinity
+
+    for (let i = 0; i < arrayNotas.length; i++) {
+        if (arrayNotas[i] > maiorNumero) {
+            maiorNumero = arrayNotas[i]
+        }
+    }
+    return maiorNumero;
+}
+
+document.write("<br>" + "Maior Número: " + maiorNumero(arrayNotas))
