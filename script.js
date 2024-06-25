@@ -24,29 +24,9 @@ let studentName = ["Joaquina", "Kirara", "Salem", "Haley", "Luke"];
 
 studentName.forEach((Element) => {document.write("<br>" + Element)});
 
+// Utilizando estrutura de repetição for, realize a tabuada do número 8 e exibe em tela da seguinte forma
 
-let professores = [
-    {
-      nome:"Rayane",
-      especialidade:"Java"
-    },
-    {
-      nome:"Eduardo",
-      especialidade:"Angular"
-    },
-    {
-      nome:"Julia",
-      especialidade:"Javascript"
-    }
-  ]
-  
-  professores.forEach((item, indice, array)=>{
-    console.log(item.nome);
-    console.log(indice);
-})
-
-
-
-// Agora, crie uma função javascript que irá receber uma variável como parâmetro; 
-// ela será um array de nomes de alguns alunos (pode ser nomes aleatórios). 
-// Através do método de array forEach(), imprima em tela (com document.write) todos os nomes do array, um abaixo do outro.
+let tabuada = 8;
+for (i=0; i<=10 ; i++){
+    document.write("<br>" + "8 x " + i + " = " + (tabuada*i));
+};
