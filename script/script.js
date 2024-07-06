@@ -1,93 +1,26 @@
-let notas = [7, 8, 10, 8];
 
+function buscaCep (e){
+    e.preventDefault();
+    let campoCep = document.getElementById("formCep");
+    let url = 'https://viacep.com.br/ws/' + campoCep.value + "/json/";
+    // console.log(url);
 
-function calcularMedia (notas) {
-    somaNotas = 0;
+    fetch(url)
+    .then((response)=>{
+        // console.log(response);
+        return response.json();
+    })
+    .then((data)=>{
+        let rua = document.getElementById("formRua");
+        let cidade = document.getElementById("formCidade");
+        let estado = document.getElementById("formEstado");
 
-    for (var nota of notas) {
-        somaNotas += nota; 
-    }
-    var media = somaNotas / notas.length;
-    return media;
+        rua.value = data.logradouro;
+        cidade.value = data.localidade;
+        estado.value = data.uf;
+
+    })
+    .catch((err)=>{
+        console.error(err);
+    })
 }
-
-let mediaFunction = prompt("Digite uma nota")
-
-if (mediaFunction > 7) {
-    document.write("Parabéns vocês passou na média!")
-} else {
-    document.write("Infelizmente você está de recuperação.")
-}
-
-
-let studentName = ["Joaquina", "Kirara", "Salem", "Haley", "Luke"];
-
-studentName.forEach((Element) => {document.write("<br>" + Element)});
-
-let tabuada = 8;
-for (i=0; i<=10 ; i++){
-    document.write("<br>" + "8 x " + i + " = " + (tabuada*i));
-};
-
-
-// let nome = prompt("Qual o nome do aluno?");
-// let idade = prompt("Qual a idade do aluno?");
-// let serie = prompt("Qual a série do aluno?");
-// let escola = prompt("Qual o nome da escola?");
-// let materiaFavorita = prompt("Qual a sua matéria favorita?")
-
-// let confirmacao = window.confirm("Os dados estão certos?")
-
-// if (confirmacao == true) {
-//     document.write("<br>" + nome + "<br>" + idade + "<br>" + serie + "<br>" + escola + "<br>" + materiaFavorita)
-// }
-
-
-let nomeMateria = prompt("Digite o nome da matéria")
-let arrayNotas = [];
-
-while (arrayNotas.length <= 3){
-    arrayNotas.push(parseInt(prompt("digite uma nota")));
-}
-
-document.write("<br>" + "Matéria: " + nomeMateria + "<br>" + "Notas: " + arrayNotas)
-
-function mediaArrayNotas (arrayNotas) {
-    debugger
-    somaNotas = 0;
-
-    for (var nota of arrayNotas) {
-        somaNotas += nota; 
-    }
-    var media = somaNotas / arrayNotas.length;
-    return media;
-}
-
-document.write("<br>" + "Média: " + mediaArrayNotas(arrayNotas))
-
-
-function maiorNumero(arrayNotas) {
-    let maiorNumero = -Infinity
-
-    for (let i = 0; i < arrayNotas.length; i++) {
-        if (arrayNotas[i] > maiorNumero) {
-            maiorNumero = arrayNotas[i]
-        }
-    }
-    return maiorNumero;
-}
-
-document.write("<br>" + "Maior Número: " + maiorNumero(arrayNotas))
-
-
-
-// Crie uma tela de cadastro com os seguintes campos:
-
-// nome;
-// idade;
-// série;
-// escola;
-// matéria favorita;
-// endereço (com cep, rua, cidade, estado).
-
-// Neste último campo, apenas deixe habilitado o campo de cep.

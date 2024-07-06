@@ -9,10 +9,10 @@
 </head>
 <body>
 
+
     <form id="cadastro" name="cadastro">
 
         <h1>Bem Vindo! <br>Entre com seu cadastro aqui</h1> <br>
-
 
         <label for="nome">Nome completo: </label>
         <input name="nome" type="text" id="formNome"> <br>
@@ -29,24 +29,27 @@
         <label for="materiaFavorita">Materia Favorita: </label>
         <input type="text" name="materiaFavorita" id="formMateriaFavorita"> <br>
 
-        <label for="cep">CEP:</label>
-        <input type="text" name="cep" id="formCep"> <br>
+        <section>
+            <h3>Endereço:</h3> <br>
 
-        <label for="rua">Rua:</label>
-        <input type="text" name="rua" id="formRua" disabled> <br>
+            <label for="cep" >CEP:</label>
+            <input type="text" name="cep" id="formCep" onblur="buscaCep(event)"> <br>
 
-        <label for="cidade">Cidade: </label>
-        <input type="text" name="cidade" id="formCidade" disabled> <br>
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" id="formRua" disabled> <br>
 
-        <label for="estado">Estado: </label>
-        <input type="text" name="estado" id="formEstado" disabled> <br>
+            <label for="cidade">Cidade: </label>
+            <input type="text" name="cidade" id="formCidade" disabled> <br>
+
+            <label for="estado">Estado: </label>
+            <input type="text" name="estado" id="formEstado" disabled> <br>
+        </section>
 
         <button type="submit">Concluir</button>
 
-
     </form>
 
-
-    <!-- <script src="script/script.js"></script> -->
+    <script src="script/script.js"></script>
+    <!-- <script src="script/scriptExtra.js"></script> -->
 </body>
 </html>
