@@ -24,3 +24,34 @@ function buscaCep (e){
         console.error(err);
     })
 }
+
+
+function sendLocalStorage(e){
+    e.preventDefault();
+
+    let nome = document.getElementById('formNome');
+    let idade = document.getElementById('formIdade');
+    let serie = document.getElementById('formSerie');
+    let escola = document.getElementById('formEscola');
+    let materiaFavorita = document.getElementById('formMateriaFavorita');
+    let cep = document.getElementById('formCep');
+    let rua = document.getElementById('formRua');
+    let cidade = document.getElementById('formCidade');
+    let estado = document.getElementById('formEstado');
+
+    let cadastro = {
+        nome: nome.value,
+        idade: idade.value,
+        serie: serie.value,
+        escola: escola.value,
+        materiaFavorita: materiaFavorita.value,
+        cep: cep.value,
+        rua: rua.value,
+        cidade: cidade.value,
+        estado: estado.value
+    }
+
+    localStorage.setItem("cadastro", JSON.stringify(cadastro));
+
+}
+
