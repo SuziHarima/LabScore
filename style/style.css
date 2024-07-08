@@ -1,0 +1,56 @@
+* {
+    background-color: whitesmoke;
+}
+
+#cadastro {
+    justify-content: center;
+    background-color: white;
+    width: 20em;
+    padding: 2em;
+    align-items: center;
+    margin: 3em 35em;
+
+}
+
+label, br {
+    background-color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+
+.formElements {
+    background-color: white;
+    display: flex;
+    padding: 0.5em;
+    font-family: "Rubik", sans-serif;
+}
+
+#formBotton {
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 6px;
+    width: 23em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+input {
+    border-radius: 6px;
+    
+}
+
+.titleCadastro {
+    font-weight: bold;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+   align-items: center;   
+   font-family: "Rubik", sans-serif;
+}
+
+h1 {
+    font-size: larger;
+}
