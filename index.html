@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleReset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+
+
+    <form id="cadastro" name="cadastro">
+
+        <h1 class="titleCadastro"> Bem Vindo! </h1> <br>
+        <p class="titleCadastro">Entre com seu cadastro aqui</p> <br>
+
+        <div class="formElements">
+        <label for="nome">Nome completo: </label>
+        <input name="nome" type="text" id="formNome"> <br>
+        </div>
+
+        <div class="formElements">
+        <label for="idade">Idade:  </label>
+        <input type="text" name="idade" id="formIdade"> <br>
+        </div>
+
+        <div class="formElements">
+        <label for="serie">Série:  </label>
+        <input type="text" name="serie" id="formSerie"> <br>
+        </div>
+
+        <div class="formElements">        
+        <label for="escola">Escola:  </label>
+        <input type="text" name="escola" id="formEscola"> <br>
+        </div>
+
+
+        <div class="formElements">
+        <label for="materiaFavorita">Materia Favorita:  </label>
+        <input type="text" name="materiaFavorita" id="formMateriaFavorita"> <br>
+        </div>
+
+        <section id="sectionEndereco"> 
+            <h3 class="formElements">Endereço:  </h3> 
+
+            <div class="formElements">
+            <label for="cep" >CEP:  </label>
+            <input type="text" name="cep" id="formCep" onblur="buscaCep(event)"> <br>
+            </div>
+
+            <div class="formElements">
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" id="formRua" disabled> <br>
+            </div>
+
+            <div class="formElements">
+            <label for="cidade">Cidade:  </label>
+            <input type="text" name="cidade" id="formCidade" disabled> <br>
+            </div>
+
+            <div class="formElements">
+            <label for="estado">Estado:   </label>
+            <input type="text" name="estado" id="formEstado" disabled> <br>
+            </div>
+
+        </section>
+
+        <button type="submit" onclick="sendLocalStorage(event)" id="formBotton">Concluir</button>
+        
+
+    </form>
+
+    <script src="script/script.js"></script>
+    <!-- <script src="script/scriptExtra.js"></script> -->
 </body>
 </html>
